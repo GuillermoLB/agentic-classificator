@@ -1,7 +1,6 @@
 # --------------------------------------------------------------
 # Customer Support Ticket Classification System
 # --------------------------------------------------------------
-
 import instructor
 from pydantic import BaseModel, Field
 from openai import OpenAI
