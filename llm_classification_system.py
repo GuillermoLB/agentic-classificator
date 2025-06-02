@@ -1,22 +1,3 @@
-Skip to content
- 
-Search Gists
-Search...
-All gists
-Back to GitHub
-@daveebbelaar
-daveebbelaar/llm_classification_system.py
-Last active yesterday • Report abuse
-Code
-Revisions
-3
-Stars
-25
-Forks
-15
-Clone this repository at &lt;script src=&quot;https://gist.github.com/daveebbelaar/d65f30bd539a9979d9976af80ec41f07.js&quot;&gt;&lt;/script&gt;
-<script src="https://gist.github.com/daveebbelaar/d65f30bd539a9979d9976af80ec41f07.js"></script>
-llm_classification_system.py
 # --------------------------------------------------------------
 # Customer Support Ticket Classification System
 # --------------------------------------------------------------
@@ -76,6 +57,7 @@ Objective: Develop an AI-powered ticket classification system that:
 - Assesses the urgency and sentiment of each ticket
 - Extracts key information for quick resolution
 - Provides confidence scores to flag uncertain cases for human review
+
 Business impact:
 - Reduce average response time by routing tickets to the right department
 - Improve customer satisfaction by prioritizing urgent and negative sentiment tickets
@@ -177,10 +159,12 @@ print(result2.model_dump_json(indent=2))
 SYSTEM_PROMPT = """
 You are an AI assistant for a large e-commerce platform's customer support team. 
 Your role is to analyze incoming customer support tickets and provide structured information to help our team respond quickly and effectively.
+
 Business Context:
 - We handle thousands of tickets daily across various categories (orders, accounts, products, technical issues, billing).
 - Quick and accurate classification is crucial for customer satisfaction and operational efficiency.
 - We prioritize based on urgency and customer sentiment.
+
 Your tasks:
 1. Categorize the ticket into the most appropriate category.
 2. Assess the urgency of the issue (low, medium, high, critical).
@@ -188,11 +172,13 @@ Your tasks:
 4. Extract key information that would be helpful for our support team.
 5. Suggest an initial action for handling the ticket.
 6. Provide a confidence score for your classification.
+
 Remember:
 - Be objective and base your analysis solely on the information provided in the ticket.
 - If you're unsure about any aspect, reflect that in your confidence score.
 - For 'key_information', extract specific details like order numbers, product names, or account issues.
 - The 'suggested_action' should be a brief, actionable step for our support team.
+
 Analyze the following customer support ticket and provide the requested information in the specified format.
 """
 
@@ -217,19 +203,3 @@ result2 = classify_ticket(ticket2)
 
 print(result1.model_dump_json(indent=2))
 print(result2.model_dump_json(indent=2))
-@roamsdev
-Comment
- 
-Leave a comment
- 
-Footer
-© 2025 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact
-Manage cookies
-Do not share my personal information
